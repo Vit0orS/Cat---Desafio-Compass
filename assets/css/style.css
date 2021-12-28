@@ -1,3 +1,9 @@
 body {
     font-family: 'Comfortaa', cursive;
 }
+
+@media screen and (max-width: 320px) {
+    .navbar-brand {
+        font-size: 1em;
+    }
+}
