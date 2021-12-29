@@ -32,6 +32,10 @@ body {
     padding-top: 20px;
 }
 
+.imagem__botao {
+    max-height: 30px;
+}
+
 @media screen and (max-width: 500px) {    
     .navbar-brand {
         font-size: 1em;
