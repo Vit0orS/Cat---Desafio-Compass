@@ -17,7 +17,7 @@ body {
 }
 
 .card img {
-    height: 300px;
+    height: auto;
 }
 
 .card-img-top {
