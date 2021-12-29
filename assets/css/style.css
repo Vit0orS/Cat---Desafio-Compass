@@ -11,6 +11,11 @@ body {
     text-shadow: 2px 3px #000000;
 }
 
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
 .card img {
     height: 300px;
 }
