@@ -12,11 +12,6 @@ body {
     padding-top: 100px;
 }
 
-.main__texto--pesquisa, .main__texto--sobre {
-    text-shadow: 2px 3px #000000;
-    padding-top: 50px;
-}
-
 /*Início página main */
 
 .card {
@@ -89,4 +84,20 @@ body {
 .carousel-caption {
     border-radius: 10px;
     background-color: #000000;
+}
+
+.textoMobile {
+    display: none;
+    color: #FFFFFF;
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 767.98px) {    
+    .fotoCarrossel{
+        height: 400px;
+    }
+
+    .textoMobile {
+        display: block;
+    }
 }

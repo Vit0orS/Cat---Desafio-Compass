@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 </head>
 <body onload="carregaCarrossel()">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <nav class="navbar navbar-brand navbar-light bg-light">
                 <div class="container-fluid">
@@ -45,8 +45,8 @@
         </div>
     </nav>
 
-    <main>
-      <h1 class="text-light text-center main__texto--sobre">Sobre</h1>
+    <main class="pb-5">
+      <h1 class="text-light text-center main__texto">Sobre</h1>
       <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -84,6 +84,17 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+
+      <div class="textoMobile mt-3">
+        <h5 class="textoCarrossel">Desaparecimentos</h5>
+        <p class="textoCarrossel">Os gatos são naturalmente curiosos, exploradores e caçadores, por este motivo podem sair de casa (a famosa voltinha) e retornar. Mas da mesma forma que retornam, podem não voltar.</p>
+        <hr>
+        <h5 class="textoCarrossel">Por que utilizar o site?</h5>
+        <p class="textoCarrossel">Tornar público o desaparecimento do seu animalzinho é algo que pode ajudar muito em sua busca. Quanto mais pessoas souberem sobre o seu pet desaparecido, maiores as chances de ele ser encontrado por alguém.</p>
+        <hr>
+        <h5 class="textoCarrossel">Gatos encontrados</h5>
+        <p class="textoCarrossel">372 gatos foram encontrados até o momento utilizando o nosso síte.</p>
       </div>
     </main>
 
