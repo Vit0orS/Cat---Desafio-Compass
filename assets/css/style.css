@@ -15,6 +15,9 @@ body {
 /* Footer */
 
 .footer {
+    position: relative;
+    bottom: 0;
+    height: 150px;
     text-align: center;
     width: 100%;
     background-image: url("../img/footerBGimage.jpg");
