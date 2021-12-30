@@ -17,8 +17,6 @@ body {
 .footer {
     text-align: center;
     width: 100%;
-    height: 150px;
-    position:absolute;
     background-image: url("../img/footerBGimage.jpg");
 }
 
