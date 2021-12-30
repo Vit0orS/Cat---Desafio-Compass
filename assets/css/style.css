@@ -12,7 +12,8 @@ body {
     padding-top: 100px;
 }
 
-.main__texto--pesquisa {
+.main__texto--pesquisa, .main__texto--sobre {
+    text-shadow: 2px 3px #000000;
     padding-top: 50px;
 }
 
@@ -72,4 +73,20 @@ body {
 .informacao__form {
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+/*Fim página adicionar*/
+
+/* Início página sobre */
+
+.fotoCarrossel{
+    width: auto;
+    height: 500px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    border-radius: 10px;
+    background-color: #000000;
 }
