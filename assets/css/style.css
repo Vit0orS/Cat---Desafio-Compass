@@ -118,3 +118,14 @@ body {
         display: block;
     }
 }
+
+/* Páginas de Pesquisa */
+
+.area__pesquisar {
+    max-width: 400px;
+    padding: 0 5px;
+}
+
+.botao__pesquisar {
+    background-color: #FFFFFF;
+}
