@@ -12,6 +12,10 @@ body {
     padding-top: 100px;
 }
 
+.main__texto--pesquisa {
+    padding-top: 50px;
+}
+
 /*Início página main */
 
 .card {
