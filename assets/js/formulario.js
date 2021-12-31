@@ -78,6 +78,18 @@ function removeMensagemErro(evento){
 
 function enviarDados(){
     event.preventDefault;
+    let allValid = true;
+
+    const elementos = document.querySelectorAll('[data-input]');
     
-    
+    elementos.forEach(elemento => {
+        if (!elemento.validity.valid){
+            allValid = false;
+            break;
+        }
+    })
+
+    if(allValid){
+        sendData();
+    }
 }

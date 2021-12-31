@@ -23,3 +23,26 @@ async function dadosCEP(CEP){
     console.log(pegaEndereco);
     return pegaEndereco.json();
 }
+
+async function sendData(){
+    const nome = document.querySelector(`[data-type="nome"]`).value;
+    const email = document.querySelector(`[data-type="email"]`).value;
+
+    return fetch(`https://prog-bolsas-api.herokuapp.com/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            nome: nome,
+            email: email
+        })
+    }).then( resposta => {
+        console.log(resposta.json)
+        if(resposta.ok){
+            window.location.href = "paginaSucesso.html";
+        } else {
+            window.location.href = "paginaErro.html"
+        }
+    })
+}
