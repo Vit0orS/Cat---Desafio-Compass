@@ -18,8 +18,8 @@ async function catApiGetID(id) {
     return pegaDados.json();
 }
 
-async function retornaDadosCEP(CEP){
-    const pegaEndereco = await fetch(`viacep.com.br/ws/${CEP}/json/`);
+async function dadosCEP(CEP){
+    const pegaEndereco = await fetch(`https://viacep.com.br/ws/${CEP}/json/`);
     console.log(pegaEndereco);
     return pegaEndereco.json();
 }
