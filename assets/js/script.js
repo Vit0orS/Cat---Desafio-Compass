@@ -11,8 +11,11 @@ function carregaCarrossel(){
 const nomes = [
     "Bob",
     "Charlie",
+    "Cookie",
     "Garfield",
+    "Mimi",
     "Kiki",
+    "Luna",
     "Zoey"
 ]
 
