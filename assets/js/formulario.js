@@ -75,3 +75,9 @@ function removeMensagemErro(evento){
     elemento.innerHTML = "";
     input.classList.remove("border-danger");
 }
+
+function enviarDados(){
+    event.preventDefault;
+    
+    
+}
