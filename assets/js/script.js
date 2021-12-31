@@ -30,14 +30,13 @@ function gatoPorID(){
 
     const nomeDoGato = nomes[Math.floor(Math.random() * nomes.length)];
 
-    document.querySelector(".nomeGato").innerHTML = `Nome: ${nomeDoGato}`;
-    document.querySelector(".encontrado").innerHTML = `Encontrado? ${encontrado%2==0 ? "SIM" : "NÃO"}`;
-    document.querySelector(".dataPerdido").innerHTML = `Data em que sumiu: ${data}`;
-
     catApiGetID(id)
     .then(dado => {
         console.log(dado);
         document.querySelector(".imagemGato").src = dado.webpurl;
+        document.querySelector(".nomeGato").innerHTML = `Nome: ${nomeDoGato}`;
+        document.querySelector(".encontrado").innerHTML = `Encontrado? ${encontrado%2==0 ? "SIM" : "NÃO"}`;
+        document.querySelector(".dataPerdido").innerHTML = `Data em que sumiu: ${data}`;
     })
 }
 

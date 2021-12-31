@@ -132,3 +132,9 @@ body {
 .botao__pesquisar {
     background-color: #FFFFFF;
 }
+
+/* Página formulários */
+
+.error {
+    color: #FF0000;
+}
