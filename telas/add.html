@@ -81,24 +81,24 @@
           <p class="informacao__form mt-5">Localização</p>
           <div class="form-group mt-3">
             <label for="inputCEP">CEP</label>
-            <input data-input="CEP" type="email" class="form-control" id="inputCEP" placeholder="XXXXX-XXX" required>
+            <input data-input="CEP" type="number" class="form-control" id="inputCEP" placeholder="XXXXX-XXX" pattern="[0-9]{5}-?[0-9]{3}" required>
             <p data-mensagemErro="CEP" class="error"></p>
           </div>
           <div class="form-group mt-3">
             <label for="inputEstado">Estado</label>
-            <input readonly type="email" class="form-control" id="inputEstado" required>
+            <input readonly type="text" class="form-control" id="inputEstado" required>
           </div>
           <div class="form-group mt-3">
             <label for="inputCidade">Cidade</label>
-            <input readonly type="email" class="form-control" id="inputCidade" required>
+            <input readonly type="text" class="form-control" id="inputCidade" required>
           </div>
           <div class="form-group mt-3">
             <label for="inputRua">Rua</label>
-            <input readonly type="email" class="form-control" id="inputRua" required>
+            <input readonly type="text" class="form-control" id="inputRua" required>
           </div>
           <div class="form-group mt-3">
             <label for="inputBairro">Bairro</label>
-            <input readonly type="email" class="form-control" id="inputBairro" required>
+            <input readonly type="text" class="form-control" id="inputBairro" required>
           </div>
 
           <hr>
@@ -139,7 +139,7 @@
           </div>
 
 
-          <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+          <button onclick="enviarDados()" type="submit" class="btn btn-primary mt-3">Enviar</button>
 
         </div>
       </form>
