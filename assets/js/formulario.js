@@ -4,6 +4,7 @@ function adicionaListeners(){
         element.addEventListener('focus', removeMensagemErro);
         element.addEventListener('blur', mostraMensagemErro);
     })
+    document.querySelector(`[data-type="enviar"]`).addEventListener('click', enviarDados);
 }
 
 const tiposDeErro = [
@@ -62,6 +63,10 @@ function mostraMensagemErro(evento){
     if(!evento.currentTarget.validity.valid){
         elemento.innerHTML = pegaMensagemErro(tipo);
         input.classList.add("border-danger");
+    } else {
+        if(tipo=="CEP"){
+            preencheCEP();
+        }
     }
 
 
@@ -76,8 +81,29 @@ function removeMensagemErro(evento){
     input.classList.remove("border-danger");
 }
 
-function enviarDados(){
-    event.preventDefault;
+function preencheCEP() {
+    const CEP = document.querySelector(`[data-input="CEP"]`).value;
+    const CEPformatado = CEP.replace('-', '');
+    console.log(CEPformatado);
+    
+    dadosCEP(CEPformatado)
+    .then (endereco => {
+        if(typeof endereco.uf !== 'undefined'){
+            document.querySelector("#inputEstado").value = endereco.uf;
+            document.querySelector("#inputCidade").value = endereco.localidade;
+            document.querySelector("#inputRua").value = endereco.logradouro;
+            document.querySelector("#inputBairro").value = endereco.bairro;
+        }
+        else {
+            document.querySelector(`[data-mensagemErro="CEP"]`).innerHTML = "CEP Inválido.";
+            document.querySelector(`[data-input="CEP"]`).classList.add("border-danger");
+        }
+    })
+    
+}
+
+function enviarDados(evento){
+    evento.preventDefault();
     let allValid = true;
 
     const elementos = document.querySelectorAll('[data-input]');
@@ -85,7 +111,6 @@ function enviarDados(){
     elementos.forEach(elemento => {
         if (!elemento.validity.valid){
             allValid = false;
-            break;
         }
     })
 

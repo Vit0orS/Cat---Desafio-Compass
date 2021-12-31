@@ -20,13 +20,12 @@ async function catApiGetID(id) {
 
 async function dadosCEP(CEP){
     const pegaEndereco = await fetch(`https://viacep.com.br/ws/${CEP}/json/`);
-    console.log(pegaEndereco);
     return pegaEndereco.json();
 }
 
 async function sendData(){
-    const nome = document.querySelector(`[data-type="nome"]`).value;
-    const email = document.querySelector(`[data-type="email"]`).value;
+    const nome = document.querySelector(`[data-input="nome"]`).value;
+    const email = document.querySelector(`[data-input="email"]`).value;
 
     return fetch(`https://prog-bolsas-api.herokuapp.com/`, {
         method: 'POST',
