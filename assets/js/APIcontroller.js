@@ -27,7 +27,7 @@ async function sendData(){
     const nome = document.querySelector(`[data-input="nome"]`).value;
     const email = document.querySelector(`[data-input="email"]`).value;
 
-    return fetch(`https://prog-bolsas-api.herokuapp.com/`, {
+    fetch(`https://prog-bolsas-api.herokuapp.com/`, {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json'
@@ -37,7 +37,8 @@ async function sendData(){
             email: email
         })
     }).then( resposta => {
-        console.log(resposta.json)
+        console.log(resposta);
+        console.log(JSON.stringify(resposta))
         if(resposta.ok){
             window.location.href = "paginaSucesso.html";
         } else {
