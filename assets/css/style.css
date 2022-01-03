@@ -12,26 +12,6 @@ body {
     padding-top: 100px;
 }
 
-/* Footer */
-
-.footer {
-    position: relative;
-    bottom: 0;
-    height: 150px;
-    text-align: center;
-    width: 100%;
-    background-image: url("../img/footerBGimage.jpg");
-}
-
-.footer__imagem {
-    width: 120px;
-    height: auto;
-}
-
-.footer__texto {
-    font-size: 1.2em;
-}
-
 /*Início página main */
 
 .card {
