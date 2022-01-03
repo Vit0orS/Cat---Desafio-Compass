@@ -118,11 +118,10 @@ function enviarDados(evento){
     evento.preventDefault();
     let allValid = true;
 
-    const elementos = document.querySelectorAll('[data-input]');
+    const elementos = document.querySelectorAll(`[data-input]`);
     
     elementos.forEach(elemento => {
         if (!elemento.validity.valid){
-            console.log(elemento + elemento.validity.valid);
             allValid = false;
         }
     })
