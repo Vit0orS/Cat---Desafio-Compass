@@ -22,6 +22,13 @@ const nomes = [
 function gatoPorID(){
     document.querySelector(".imagemGato").src = "../assets/img/loading-buffering.gif"
 
+    const timeout = setTimeout(() => {
+        document.querySelector(".imagemGato").src = "../assets/img/errorImage.png";
+        document.querySelector(".nomeGato").innerHTML = `Não foi possível encontrar um gato com esse ID`;
+        document.querySelector(".encontrado").innerHTML = `Talvez você digitou errado, ou o servidor está fora...`;
+        document.querySelector(".dataPerdido").innerHTML = '';
+    }, 6000)
+
     const data = new generateRandomDate().toLocaleDateString('pt-BR');
 
     const id = document.querySelector("#inputID").value;
@@ -31,13 +38,13 @@ function gatoPorID(){
     const nomeDoGato = nomes[Math.floor(Math.random() * nomes.length)];
 
     catApiGetID(id)
-    .then(dado => {
-        console.log(dado);
+    .then((dado) => {
+        clearTimeout(timeout);
         document.querySelector(".imagemGato").src = dado.webpurl;
         document.querySelector(".nomeGato").innerHTML = `Nome: ${nomeDoGato}`;
         document.querySelector(".encontrado").innerHTML = `Encontrado? ${encontrado%2==0 ? "SIM" : "NÃO"}`;
         document.querySelector(".dataPerdido").innerHTML = `Data em que sumiu: ${data}`;
-    })
+        })
 }
 
 function gatoPorCEP(){
