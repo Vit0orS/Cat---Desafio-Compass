@@ -127,6 +127,7 @@ function enviarDados(evento){
     })
 
     if(allValid){
+        document.querySelector(`[data-type=enviar]`).innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviar`;
         sendData();
     }
 }
