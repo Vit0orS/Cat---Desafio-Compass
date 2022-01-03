@@ -61,6 +61,9 @@ function mostraMensagemErro(evento){
     const input = document.querySelector(`[data-input="${tipo}"]`)
 
     if(!evento.currentTarget.validity.valid){
+        if(tipo=="CEP"){
+            removeDadosCEP();
+        }
         elemento.innerHTML = pegaMensagemErro(tipo);
         input.classList.add("border-danger");
     } else {
@@ -97,9 +100,18 @@ function preencheCEP() {
         else {
             document.querySelector(`[data-mensagemErro="CEP"]`).innerHTML = "CEP Inválido.";
             document.querySelector(`[data-input="CEP"]`).classList.add("border-danger");
+
+            removeDadosCEP();
         }
     })
     
+}
+
+function removeDadosCEP() {
+    document.querySelector("#inputEstado").value = "";
+    document.querySelector("#inputCidade").value = "";
+    document.querySelector("#inputRua").value = "";
+    document.querySelector("#inputBairro").value = "";
 }
 
 function enviarDados(evento){
@@ -110,6 +122,7 @@ function enviarDados(evento){
     
     elementos.forEach(elemento => {
         if (!elemento.validity.valid){
+            console.log(elemento + elemento.validity.valid);
             allValid = false;
         }
     })
