@@ -84,6 +84,7 @@ body {
 
 .fotoCarrossel{
     width: auto;
+    max-width: 50%;
     height: 500px;
     margin: auto;
     border-radius: 15px;
@@ -107,6 +108,14 @@ body {
 
     .textoMobile {
         display: block;
+    }
+}
+
+
+@media screen and (max-width: 453px) {
+    .fotoCarrossel{
+        max-width: 100%;
+        object-fit: contain;
     }
 }
 
