@@ -1,9 +1,3 @@
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Lora&family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
-</head>
-
 <h1 align="center">
 
 🐱 Cat - Gatos desaparecidos 🐈
