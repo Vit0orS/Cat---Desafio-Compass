@@ -1,16 +1,6 @@
-/*async function pegaFoto (){
-    const foto = await catApiGet();
-    console.log(foto);
-}*/ // Testes
-
 async function catApiGet() {
-    return await fetch(`https://thatcopy.pw/catapi/rest/`)
-    .then( resposta => {
-        if(resposta.ok){
-            return resposta.json();
-        }
-        throw new Error('Não foi acessar a foto');
-    })
+    const pegaDados = await fetch(`https://thatcopy.pw/catapi/rest/`)
+    return pegaDados.json();
 }
 
 async function catApiGetID(id) {
