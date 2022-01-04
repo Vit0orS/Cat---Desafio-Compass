@@ -8,6 +8,12 @@
 ![Logo](/assets/img/pageIcon.png)
 </div>
 
+---
+
+Autor: Vitor da Silveira
+
+---
+
 Website utilizando API <span style="color: orange; font-size: 1.1em">**"catAPI"**</span>, escrito para o Desafio 2 do Programa de Bolsas da *Compass UOL*.<br><br>
 
 **Tecnologias utilizadas:**
