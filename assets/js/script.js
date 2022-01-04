@@ -27,7 +27,7 @@ function gatoPorID(){
         document.querySelector(".nomeGato").innerHTML = `Não foi possível encontrar um gato com esse ID`;
         document.querySelector(".encontrado").innerHTML = `Talvez você digitou errado, ou o servidor está fora...`;
         document.querySelector(".dataPerdido").innerHTML = '';
-    }, 6000)
+    }, 8000)
 
     const data = new generateRandomDate().toLocaleDateString('pt-BR');
 
@@ -66,7 +66,7 @@ function gatoPorCEP(){
             dataPerdidoTexto[i].innerHTML = '';
             localTexto[i].innerHTML = '';
         }
-    }, 6000)
+    }, 8000)
 
     dadosCEP(CEP)
     .then(local => {
