@@ -24,25 +24,28 @@ async function dadosCEP(CEP){
 }
 
 async function sendData(){
-    const nome = document.querySelector(`[data-input="nome"]`).value;
-    const email = document.querySelector(`[data-input="email"]`).value;
+    const nome = document.querySelector(`[data-input=nome]`).value;
+    const email = document.querySelector(`[data-input=email]`).value;
 
-    fetch(`https://prog-bolsas-api.herokuapp.com/`, {
+    const resposta = await fetch(`https://prog-bolsas-api.herokuapp.com/`, {
         method: 'POST',
         headers: {
-            'Content-Type' : 'application/json'
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             nome: nome,
             email: email
         })
-    }).then( resposta => {
-        console.log(resposta);
-        console.log(JSON.stringify(resposta))
-        if(resposta.ok){
-            window.location.href = "paginaSucesso.html";
-        } else {
-            window.location.href = "paginaErro.html"
-        }
     })
+    const respostaJSON = await resposta.json();
+
+    console.log(respostaJSON);
+    console.log(respostaJSON.data);
+
+    if(respostaJSON.success){
+        window.location.href = "paginaSucesso.html";
+    } else {
+        window.location.href = "paginaErro.html"
+    }
 }
